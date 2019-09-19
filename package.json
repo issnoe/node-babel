@@ -1,0 +1,21 @@
+{
+  "name": "@skyalert/name-service",
+  "version": "1.0.0",
+  "author": "luis@skyalert.mx",
+  "license": "MIT",
+  "description": "Node server with babel",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel lib -d dist",
+    "start": "npm run build && nodemon dist/index.js",
+    "serve": "npm run build && node dist/index.js",
+    "test": "npm run build && mocha --require @babel/register"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/register": "^7.6.0",
+    "nodemon": "^1.19.2"
+  }
+}
