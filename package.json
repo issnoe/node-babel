@@ -3,20 +3,23 @@
   "version": "1.0.0",
   "author": "luis@skyalert.mx",
   "license": "MIT",
-  "description": "Node server with babel",
+  "description": "Template for lambda",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel lib -d dist",
     "start": "npm run build && nodemon dist/index.js",
     "serve": "npm run build && node dist/index.js",
-    "test": "npm run build && mocha --require @babel/register", 
-    "invoke":"node_modules/.bin/serverless --help"
+    "test": "npm run build && mocha --require @babel/register",
+    "deploy": "node_modules/.bin/serverless deploy"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "@babel/register": "^7.6.0",
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "@skyalert/eslint-config": "^1.0.2",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^24.1.0",
     "nodemon": "^1.19.2"
   },
   "dependencies": {
